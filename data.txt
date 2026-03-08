@@ -1,0 +1,2 @@
+this is data file.
+it is used for reading contents of this file.
