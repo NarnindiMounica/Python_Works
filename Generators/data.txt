@@ -1,0 +1,5 @@
+Artificial Intelligence (AI) is when computers are designed to act smart, almost like humans. It means teaching machines to learn, think, and solve problems. AI can look at information, understand language, recognize images, and even make decisions.
+
+We use AI in many parts of daily life. Voice assistants like Siri or Alexa answer questions, self-driving cars help with transportation, and websites suggest movies, songs, or products we might like. In hospitals, AI helps doctors find diseases faster, and in schools, it can support personalized learning.
+
+AI is very useful because it saves time, reduces mistakes, and discovers new ideas. But it also has challenges, like protecting privacy, avoiding unfair bias, and making sure people don’t lose jobs. In the future, AI may become even smarter, helping humans solve big problems while being used safely and responsibly.
