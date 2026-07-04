@@ -1,7 +1,8 @@
 def bubble_sorting(arr):
     "this fucntion is used to perform bubble sorting"
-    for j in range(len(arr)):
-        for i in range(len(arr)-1):
+    arr_len = len(arr)
+    for j in range(arr_len):
+        for i in range(arr_len-1-j):
             if arr[i] > arr[i+1]:
                 arr[i], arr[i+1] = arr[i+1], arr[i]
     return arr        
