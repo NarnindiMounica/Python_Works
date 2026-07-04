@@ -1,4 +1,4 @@
-def binary_sort(arr, target):
+def binary_search(arr, target):
     "this function is used to perform binary sorting on elements given in array to find target value's index, if present in array"
 
     array_len  = len(arr)
@@ -20,4 +20,4 @@ def binary_sort(arr, target):
     return -1 
 
 
-print(binary_sort(arr=[12, 23, 45, 67, 89], target=8))
+print(binary_search(arr=[12, 23, 45, 67, 89], target=8))
