@@ -1,5 +1,5 @@
 def bubble_sorting(arr):
-    "this fucntion is used to perform bubble sorting"
+    "this function is used to perform bubble sorting"
     arr_len = len(arr)
     for j in range(arr_len):
         for i in range(arr_len-1-j):
