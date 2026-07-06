@@ -9,9 +9,10 @@ def insertion_sorting(arr):
         while current_pos >= 0:
             if arr[current_pos] < current_card:
                 break
-            arr[current_pos]+1 = arr[current_pos]
-            current_pos = current_pos -1
-
+            else:
+                arr[current_pos+1] = arr[current_pos]
+                current_pos = current_pos -1
+            arr[current_pos + 1] = current_card 
     return arr
 
 
