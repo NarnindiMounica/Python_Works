@@ -7,6 +7,9 @@ print_ll(head)
 def insert_at_tail(head, data):
     new_node = Node(value=data)
 
+    if head is None:
+        return new_node #incase of empty linkedlist, we return the new node itself
+
     temp = head
     while temp.next != None:
         temp = temp.next
@@ -17,3 +20,8 @@ def insert_at_tail(head, data):
 head_after_insertion = insert_at_tail(head, data=12)
 print("\nLinked List After Insertion")
 print_ll(head_after_insertion)
+
+
+#using arrays or lists we would need to create new list with enough space to add all elements , time complexity is O(n)
+
+#using linked lists time complexity is O(n)
