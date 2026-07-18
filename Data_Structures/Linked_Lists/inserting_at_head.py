@@ -13,5 +13,5 @@ def insert_at_head(head, data):
     return head
 
 head_after_insertion = insert_at_head(head, data=12)
-print("Linked List After Insertion")
+print("\nLinked List After Insertion")
 print_ll(head_after_insertion)
