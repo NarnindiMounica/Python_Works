@@ -52,7 +52,7 @@ def take_input_better():
 
 
         value = int(input("Enter value of a node:")) 
-        return head
+    return head
     
    
   
