@@ -9,3 +9,6 @@ second = Node(2)
 print(id(first), id(second))
 
 first.next = second
+
+print(id(first.next))
+print(id(second))
