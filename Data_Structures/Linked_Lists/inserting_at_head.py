@@ -17,3 +17,5 @@ print("\nLinked List After Insertion")
 print_ll(head_after_insertion)
 
 #using arrays or lists we would need to shift positions based on elements to insert at head , time complexity is O(n)
+
+#using linked lists time complexity is O(1)
