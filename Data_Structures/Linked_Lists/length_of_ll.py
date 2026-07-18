@@ -16,3 +16,18 @@ def length_of_ll(head):
 head_of_ll = take_input_better()
 len_of_ll = length_of_ll(head=head_of_ll)
 print(f"Length of Linked List: {len_of_ll}")
+
+
+def length_of_ll_recursion(head):
+
+    #base case
+    if head == None:
+        return 0
+    
+    #recursive call
+    small_answer = length_of_ll_recursion(head.next)
+
+    return 1+ small_answer
+
+len_using_recursion=length_of_ll_recursion(head=head_of_ll)
+print(f"Length of Linked List using Recursion: {len_using_recursion}")
