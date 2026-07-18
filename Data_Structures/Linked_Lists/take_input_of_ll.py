@@ -7,7 +7,7 @@ def print_ll(head):
     temp = head
 
     while temp != None:
-        print(temp.data)
+        print(temp.data, end= "->")
         temp = temp.next  
 
     return       
@@ -25,7 +25,7 @@ def take_input():
             temp = head
             while temp.next != None:
                 temp = temp.next
-                
+
             temp.next = new_node         
 
         value = int(input("Enter a value of node: "))
@@ -33,4 +33,27 @@ def take_input():
     print_ll(head)
     return
 
-take_input()
+#big O time complexity of this function is O(n^2), to improve this we need to write better function
+
+def take_input_better():
+
+    value = int(input("Enter value of a node:"))
+    head = None
+    tail = None
+
+    while value != -1:
+        new_node = Node(value=value)
+        if head == None and tail == None:
+            
+            head = tail = new_node
+        else:
+            tail.next = new_node
+            tail = tail.next
+
+
+        value = int(input("Enter value of a node:")) 
+
+    print_ll(head)
+    return       
+# this function has Big O time complexity of O(n), using tail variable we reduced time complexity
+take_input_better()
