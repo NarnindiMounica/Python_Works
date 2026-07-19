@@ -18,5 +18,20 @@ def search_by_index(head, index):
     return None    
 
 
+# head = create_ll_from_list([1,2,3,4,5])
+# print(search_by_index(head=head, index=-1))
+
+def search_by_index_recursion(head, index):
+ 
+    temp = head
+
+    if temp == None:
+        return None
+    
+    if  index == 0:
+        return temp.data
+    
+    return search_by_index_recursion(temp.next, index-1)
+
 head = create_ll_from_list([1,2,3,4,5])
-print(search_by_index(head=head, index=-1))
+print(search_by_index_recursion(head=head, index=0))
