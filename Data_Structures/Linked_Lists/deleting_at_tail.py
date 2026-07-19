@@ -1,12 +1,22 @@
 from commons import print_ll, take_input_better
 
-
 def deletion_at_tail(head):
+    if head == None or head.next==None:
+        return None
+    
+    temp = head
+    while temp.next.next != None:
+        temp = temp.next
+    temp.next = None    
+
+    return head    
+
+def deletion_at_tail_recursion(head):
     if head == None:
         return None
     if head.next == None:
         return None
-    head.next = deletion_at_tail(head.next)
+    head.next = deletion_at_tail_recursion(head.next)
 
     return head
 
