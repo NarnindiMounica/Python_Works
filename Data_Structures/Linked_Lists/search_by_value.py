@@ -16,7 +16,27 @@ def search_by_value(head, value):
 
     return -1    
 
-head = create_ll_from_list(lst=[1,2,3,4,5])
-print(search_by_value(head, value=3))
+# head = create_ll_from_list(lst=[1,2,3,4,5])
+# print(search_by_value(head, value=3))
 
+
+def search_by_value_recursion(head, value):
+    inx = 0
+    #base case
+    if head == None:
+        return -1
+    
+    temp = head
+    if temp.data == value:
+        return inx
+    #recursive call
+    
+    res = search_by_value_recursion(temp.next, value)
+    if res == -1:
+        return -1
+    else:
+        return res+1
+
+head = create_ll_from_list(lst=[1,2,3,4,5])
+print(search_by_value_recursion(head, value=3))
 
