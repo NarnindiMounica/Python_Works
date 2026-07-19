@@ -25,3 +25,15 @@ print_ll(head_after_insertion)
 #using arrays or lists we would need to create new list with enough space to add all elements , time complexity is O(n)
 
 #using linked lists time complexity is O(n)
+
+def inserting_at_tail_recursion(head, data):
+    new_node = Node(value=data)
+    if head == None:
+        return new_node
+    head.next = inserting_at_tail_recursion(head.next, data)
+
+    return head
+
+head = take_input_better()
+head_after_insertion= inserting_at_tail_recursion(head, data=12)
+print_ll(head_after_insertion)
