@@ -54,10 +54,10 @@ def take_input_better():
         value = int(input("Enter value of a node:")) 
     return head
     
-def create_ll_from_list(list):
+def create_ll_from_list(lst):
     head = None
     tail = None
-    for i in list:
+    for i in lst:
         new_node = Node(value=i)
         if head==None:
 
