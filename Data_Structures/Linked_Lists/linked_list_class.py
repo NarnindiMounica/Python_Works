@@ -6,5 +6,4 @@ class Node:
 
 
 class LinkedList:
-    
-            
+        
