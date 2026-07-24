@@ -16,7 +16,7 @@ def reverse_of_ll(head):
     temp.next = head
     head.next = None    
 
-    return small_answe
+    return small_answer
 
 
 head_rev = reverse_of_ll(head)
