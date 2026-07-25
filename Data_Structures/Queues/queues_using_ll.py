@@ -54,8 +54,3 @@ print(queue_from_ll.enqueue(3))
 print(queue_from_ll.get_size())
 print(queue_from_ll.dequeue())
 print(queue_from_ll.front()) 
-
-         
-
-
-
