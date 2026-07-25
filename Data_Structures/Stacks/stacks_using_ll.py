@@ -24,6 +24,20 @@ class StackFromLL:
 
     def is_empty(self):
         return  self.size==0
+
+    def top(self):
+        return self.head.data
+
+    def pop(self):
+        if self.head is None or self.size == 0:
+            return "Stack is empty, cannot pop an element"
+
+        data_at_top = self.head.data
+        self.head = self.head.next
+        self.size -= 1
+        return data_at_top
+
+
        
 
 
