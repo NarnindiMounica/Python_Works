@@ -36,17 +36,24 @@ class QueueFromLL:
         temp = self.head.data
         self.head = self.head.next
         self.size -= 1
+        if self.head==None:
+            self.tail = None
         return f"{temp} dequeued from queue"
 
+    def front(self):
+        if self.get_size()==0:
+            return "Cannot get front element from empty queue"
+        return self.head.data
 
-queue_from_list = QueueFromList()
 
-print(queue_from_list.is_empty())
-print(queue_from_list.enqueue(2))
-print(queue_from_list.enqueue(3))
-print(queue_from_list.get_size())
-print(queue_from_list.dequeue())
-print(queue_from_list.front()) 
+queue_from_ll = QueueFromLL()
+
+print(queue_from_ll.is_empty())
+print(queue_from_ll.enqueue(2))
+print(queue_from_ll.enqueue(3))
+print(queue_from_ll.get_size())
+print(queue_from_ll.dequeue())
+print(queue_from_ll.front()) 
 
          
 
