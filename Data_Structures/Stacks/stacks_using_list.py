@@ -1,24 +1,24 @@
 class StacksFromList:
 
     def __init__(self):
-        self.stack = []
+        self.__stack = []
 
     def push(self, data):
-        self.stack.append(data) 
-        return self.stack
+        self.__stack.append(data) 
+        return self.__stack
 
     def is_empty(self):
-        return len(self.stack)==0
+        return len(self.__stack)==0
 
     def size(self):
-        return len(self.stack)
+        return len(self.__stack)
 
     def top(self):
-        return self.stack[-1]
+        return self.__stack[-1]
 
     def pop(self):
-        print(self.stack.pop())
-        return self.stack
+        print(self.__stack.pop())
+        return self.__stack
 
 
 stacks_from_list = StacksFromList()
@@ -31,5 +31,13 @@ print(stacks_from_list.size())
 print(stacks_from_list.top())
 print(stacks_from_list.pop())
 print(stacks_from_list.is_empty())
+
+#using list inbuilt operation
+#print(stacks_from_list.stack.insert(0,19))
+print(stacks_from_list.pop())
+
+#we are making stack variable a private variable so that users cannot use inbuilt list operations on it.
+
+
 
            
