@@ -28,6 +28,26 @@ class QueueFromLL:
             self.tail = new_node
 
         return f"{value} is enqueued in queue"
+
+
+    def dequeue(self):
+        if self.get_size()==0:
+            return "Cannot dequeue element from empty queue"
+        temp = self.head.data
+        self.head = self.head.next
+        self.size -= 1
+        return f"{temp} dequeued from queue"
+
+
+queue_from_list = QueueFromList()
+
+print(queue_from_list.is_empty())
+print(queue_from_list.enqueue(2))
+print(queue_from_list.enqueue(3))
+print(queue_from_list.get_size())
+print(queue_from_list.dequeue())
+print(queue_from_list.front()) 
+
          
 
 
