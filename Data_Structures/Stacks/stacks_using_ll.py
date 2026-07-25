@@ -15,11 +15,11 @@ class StackFromLL:
             self.head = new_node
             self.head.next = None
         else:
-            self.head.next=new_node
+            new_node.next = self.head
             self.head = new_node
         return f"Data {value} pushed into stack"  
 
-    def size(self):
+    def get_size(self):
         return self.size
 
     def is_empty(self):
