@@ -14,9 +14,15 @@ class StacksFromList:
         return len(self.__stack)
 
     def top(self):
+        if len(self.__stack)==0:
+            print("Empty Stack")
+            return None
         return self.__stack[-1]
 
     def pop(self):
+        if len(self.__stack)==0:
+            print("Empty Stack")
+            return None
         print(self.__stack.pop())
         return self.__stack
 
