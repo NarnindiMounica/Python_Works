@@ -32,6 +32,7 @@ def print_tree_detailed(node):
         return
 
     print(f"{node.data}:", end = " ")
+    
     for eachChild in node.children:
         print(eachChild.data, end=",")
     print()

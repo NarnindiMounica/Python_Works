@@ -5,14 +5,16 @@ def take_input():
     data = input("Enter data of the node: ")
     node = TreeNode(data)
 
-    num_of_children = int(input("Enter number of children of the node: "))
+    num_of_children = int(input(f"Enter number of children of the node {data}: "))
     for _ in range(num_of_children):
         child = take_input()
+        print(child)
         node.children.append(child)
 
-    return print_tree_detailed(node)
+    return node
 
-take_input()
+root_node = take_input()
+print_tree_detailed(root_node)
 
 
 
