@@ -3,8 +3,13 @@ class TreeNode:
         self.data = data
         self.children = []
 
-root = TreeNode(1)  
-child1 = root.children.append(2)
-child2 = root.children.append(3)     
+root = TreeNode(1) 
+child1 = TreeNode(2)
+child2 = TreeNode(3)
+child3 = TreeNode(4) 
 
-print(root.children)
+root.children.append(child1)
+root.children.append(child2)
+root.children.append(child3)
+  
+print(root.children[0].data)
