@@ -12,4 +12,10 @@ root.children.append(child1)
 root.children.append(child2)
 root.children.append(child3)
   
-print(root.children[0].data)
+def print_tree(node):
+
+    print(node.data)
+    for eachChild in node.children:
+        print_tree(eachChild)
+
+print_tree(root)
