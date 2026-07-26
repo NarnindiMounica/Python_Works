@@ -28,7 +28,7 @@ def print_tree(node):
 #print_tree(root)
 
 def print_tree_detailed(node):
-    if root == None:
+    if node == None:
         return
 
     print(f"{node.data}:", end = " ")
@@ -38,6 +38,6 @@ def print_tree_detailed(node):
     for eachChild in node.children:    
         print_tree_detailed(eachChild)
 
-print_tree_detailed(root)        
+#print_tree_detailed(root)        
 
 
