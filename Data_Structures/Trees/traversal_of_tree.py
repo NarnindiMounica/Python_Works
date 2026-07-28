@@ -25,4 +25,14 @@ def postorder_traversal(root):
     if root == None:
         return None
 
-    for eachChild in 
+    for eachChild in root.children:
+        postorder_traversal(eachChild)
+
+    print(f'{root.data}', end = " ") 
+
+root1, root2, root3 = predefined_generic_trees()
+postorder_traversal(root1)
+print()
+postorder_traversal(root2)
+print()
+postorder_traversal(root3)       
