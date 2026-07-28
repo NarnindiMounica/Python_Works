@@ -14,4 +14,4 @@ def get_tree_height(root):
 root1, root2, root3 = predefined_generic_trees()
 print(get_tree_height(root1))
 print(get_tree_height(root2))
-print(get_tree_height(root3))
+print(get_tree_height(root3)
