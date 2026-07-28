@@ -41,5 +41,5 @@ def print_binary_tree_detailed(root):
     print_binary_tree_detailed(root.left)
     print_binary_tree_detailed(root.right)
 
-print_binary_tree_detailed(root)    
+#print_binary_tree_detailed(root)    
 
