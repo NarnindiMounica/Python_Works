@@ -28,7 +28,7 @@ def take_input_level_wise():
 
     return node
 
-root = take_input_level_wise()
-print_binary_tree_detailed(root)           
+# root = take_input_level_wise()
+# print_binary_tree_detailed(root)           
 
 
