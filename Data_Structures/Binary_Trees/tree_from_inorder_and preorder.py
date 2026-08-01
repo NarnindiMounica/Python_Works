@@ -32,5 +32,10 @@ def construct_tree_from_inorder_preorder(inorder, preorder, inS, inE, preS, preE
 
     return root
 
+inorder = [5, 4, 2, 1, 3, 6]
+preorder = [1, 2, 4, 5, 3, 6]
+n = len(inorder)
 
+root = construct_tree_from_inorder_preorder(inorder, preorder, 0, n-1, 0, n-1)
+print_binary_tree_detailed(root)
 
