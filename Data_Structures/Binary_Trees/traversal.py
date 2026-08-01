@@ -25,6 +25,16 @@ def post_order_traversal(root):
 
     print(f"{root.data}", end = " ")
 
-root = take_input_level_wise()
-print_binary_tree_detailed(root)
-post_order_traversal(root)    
+print()
+post_order_traversal(root)  
+
+def in_order_traversal(root):
+    if root == None:
+        return None
+
+    in_order_traversal(root.left)
+    print(f"{root.data}", end =" ")
+    in_order_traversal(root.right)
+
+print()
+in_order_traversal(root)      
