@@ -1,15 +1,15 @@
 class Hashmap:
     def __init__(self, capacity):
         self.capacity = capacity
-        self.slots = [None]*self.capacity
-        self.values = [None]*self.capacity
+        self.slots = [None] * self.capacity
+        self.values = [None] * self.capacity
         self.size = 0
 
     def hash_function(self, key):
         return abs(hash(key)) % self.capacity
 
     def rehash(self, initial_value):
-        return initial_value + 1
+        return (initial_value + 1) % self.capacity
     
     def insert(self, key, value):
         hash_value = self.hash_function(key) 
@@ -27,7 +27,7 @@ class Hashmap:
                 new_hash_value = self.rehash(initial_index)
             #continue probing until an empty slot is found or key is found    
                 while self.slots[new_hash_value] is not None and self.slots[new_hash_value] is not key:
-                    new_hash_value = self.rehash(initial_index)
+                    new_hash_value = self.rehash(new_hash_value)
 
                 if self.slots[new_hash_value]==None:  
                     self.slots[new_hash_value] = key
@@ -46,13 +46,18 @@ class Hashmap:
 
             current_position = self.rehash(current_position)
 
-        if current_position == initial_index:
-            return "Not Found, Traversal Completed"
+            if current_position == initial_index:
+                return "Not Found, Traversal Completed"
 
         return "Not Found"
 
     
 
+h1 = Hashmap(3)
+h1.insert("apple", 10)
+h1.insert("banana", 20)
+print(h1.get('banana'))  
+print(h1.get('pineapple'))
 
 
 
