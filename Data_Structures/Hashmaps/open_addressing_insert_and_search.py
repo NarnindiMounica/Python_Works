@@ -25,7 +25,16 @@ class Hashmap:
 
             else:
                 new_hash_value = self.rehash(initial_index)
-                 
+            #continue probing until an empty slot is found or key is found    
+                while self.slots[new_hash_value] is not None and self.slots[new_hash_value] is not key:
+                    new_hash_value = self.rehash(initial_index)
+
+                if self.slots[new_hash_value]==None:  
+                    self.slots[new_hash_value] = key
+                    self.values[new_hash_value] = value
+                else:
+                    self.values[new_hash_value] = value 
+
 
 
 
