@@ -51,11 +51,27 @@ class Hashmap:
 
         return "Not Found"
 
-    
+    def delete(self, key):
+        initial_index = self.hash_function(key)
+        current_position = initial_index
+
+        while(self.slots[current_position] is not None):
+            if self.slots[current_position] == key:
+                self.slots[current_position] = None
+                self.values[current_position] = None
+                print(f"{key} has been deleted")
+                return
+            current_position = self.rehash(current_position)
+
+            if current_position == initial_index:
+                break
+
+        return "Key not found to delete, traversal completed"
 
 h1 = Hashmap(3)
 h1.insert("apple", 10)
 h1.insert("banana", 20)
+h1.insert("litchi", 30)
 print(h1.get('banana'))  
 print(h1.get('pineapple'))
 
