@@ -74,6 +74,13 @@ class Hashmap:
     def __getitem__(self, key):
         return self.get(key)
 
+    def __str__(self):
+        result = []
+        for i in range(self.capacity):
+           if self.slots[i] is not None:
+               result.append(f"{self.slots[i]} : {self.values[i]}")
+        return ", ".join(result)       
+
 h1 = Hashmap(3)
 h1.insert("apple", 10)
 h1.insert("banana", 20)
@@ -81,6 +88,7 @@ h1.insert("litchi", 30)
 h1.delete("litchi")
 print(h1.get('banana'))  
 print(h1.get('pineapple'))
+print(h1)
 
 
 
