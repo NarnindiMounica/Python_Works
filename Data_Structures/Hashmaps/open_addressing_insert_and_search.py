@@ -71,6 +71,9 @@ class Hashmap:
     def __setitem__(self, key, value):
         return self.insert(key, value)
 
+    def __getitem__(self, key):
+        return self.get(key)
+
 h1 = Hashmap(3)
 h1.insert("apple", 10)
 h1.insert("banana", 20)
