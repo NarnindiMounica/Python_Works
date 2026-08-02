@@ -68,10 +68,14 @@ class Hashmap:
 
         return "Key not found to delete, traversal completed"
 
+    def __setitem__(self, key, value):
+        return self.insert(key, value)
+
 h1 = Hashmap(3)
 h1.insert("apple", 10)
 h1.insert("banana", 20)
 h1.insert("litchi", 30)
+h1.delete("litchi")
 print(h1.get('banana'))  
 print(h1.get('pineapple'))
 
