@@ -36,6 +36,23 @@ class Hashmap:
                     self.values[new_hash_value] = value 
 
 
+    def get(self, key):
+        initial_index = self.hash_function(key)
+        current_position = initial_index
+
+        while self.slots[current_position] is not None:
+            if self.slots[current_position]==key:
+                return self.values[current_position]
+
+            current_position = self.rehash(current_position)
+
+        if current_position == initial_index:
+            return "Not Found, Traversal Completed"
+
+        return "Not Found"
+
+    
+
 
 
 
