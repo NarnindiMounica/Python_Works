@@ -10,8 +10,17 @@ class LinkedList:
 
     def add(self, key, value):
         new_node = LLNode(key, value)
-        if self.head == None:
-            new_node.next = self.head
-            self.head = new_node
+        new_node.next = self.head
+        self.head = new_node
+
+    def search(self, key):
+        current = self.head
+        while current.next != None:
+            if current.key == key:
+                return f"{key} is Found"
+            current = current.next
+
+        return "Not Found"    
+
 
 
