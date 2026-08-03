@@ -24,7 +24,22 @@ class HashmapUsingChaining:
             bucket.add(key, value)
             self.size += 1
         else:
-            node.value = value    
+            node.value = value  
+
+
+    def get(self, key):
+        bucket_index = self.hash_function(key)
+        bucket = self.buckets[bucket_index]
+
+        node = bucket.search(key)
+
+        if node is not None:
+            return node.value
+        else:
+            return "Key Not Found"
+        
+
+
 
 
 
