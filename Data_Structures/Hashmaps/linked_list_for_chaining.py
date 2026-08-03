@@ -40,7 +40,17 @@ class LinkedList:
             previous = next
             current = current.next   
 
-        return False     
+        return False   
+
+
+    def traverse(self):
+        current = self.head
+
+        while current is not None:
+            print(f"{current.key}:{current.value}--->", end = " ")
+            current = current.next
+
+        print("None")      
 
 
 
