@@ -16,4 +16,13 @@ class HashmapUsingChaining:
 
     def insert(self, key, value):
         bucket_index = self.hash_function(key)
+        bucket = self.buckets[bucket_index]
+
+        node = bucket.search(key)
+
+        if node is None:
+            bucket.add(key, value)
+            self.size += 1
+            
+
 
