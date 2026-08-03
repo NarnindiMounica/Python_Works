@@ -17,10 +17,10 @@ class LinkedList:
         current = self.head
         while current != None:
             if current.key == key:
-                return f"{key} is Found"
+                return current
             current = current.next
 
-        return "Not Found" 
+        return None 
 
     def delete(self, key):
         current = self.head
