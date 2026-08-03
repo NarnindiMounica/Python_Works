@@ -15,12 +15,31 @@ class LinkedList:
 
     def search(self, key):
         current = self.head
-        while current.next != None:
+        while current != None:
             if current.key == key:
                 return f"{key} is Found"
             current = current.next
 
-        return "Not Found"    
+        return "Not Found" 
+
+    def delete(self, key):
+        current = self.head
+        previous = None
+
+        while current != None:
+
+            if current.key == key:
+                if previous == None:
+                    #deleting head
+                    self.head = current.next
+                else:
+                    previous.next = current.next
+                    return True
+
+            previous = next
+            current = current.next    
+
+
 
 
 
