@@ -7,6 +7,13 @@ class HashmapUsingChaining:
         self.buckets = self.__create_buckets(self.capacity)
 
     def __create_buckets(self):
-        buckets = [LinkedList() for i in range(self.capacity)]
+        buckets = [LinkedList() for _ in range(self.capacity)]
         return buckets
+
+    def hash_function(self, key):
+        return abs(hash(key)) % self.capacity
+
+
+    def insert(self, key, value):
+        bucket_index = self.hash_function(key)
 
