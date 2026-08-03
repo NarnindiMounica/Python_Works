@@ -23,6 +23,8 @@ class HashmapUsingChaining:
         if node is None:
             bucket.add(key, value)
             self.size += 1
-            
+        else:
+            node.value = value    
+
 
 
