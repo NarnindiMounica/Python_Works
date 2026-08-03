@@ -32,12 +32,15 @@ class LinkedList:
                 if previous == None:
                     #deleting head
                     self.head = current.next
+                    return True
                 else:
                     previous.next = current.next
                     return True
 
             previous = next
-            current = current.next    
+            current = current.next   
+
+        return False     
 
 
 
