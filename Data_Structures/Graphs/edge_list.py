@@ -17,6 +17,15 @@ class GraphUsingEdgeList:
         else:
             return "Either one or both vertices are not found"
 
+    def display(self):
+        print("Vertices")
+
+        for vertex in self.V:
+            print(f"Vertex: {vertex}") 
+
+        for source, destination, weight in self.edges:
+            print(f"{source} ---> {destination}")       
+
 
 graph = GraphUsingEdgeList()
 graph.add_vertex(1)
@@ -25,5 +34,7 @@ graph.add_vertex(3)
 
 graph.add_edge(1,2,1)
 graph.add_edge(2,3,1)
+
+graph.display()
 
 
