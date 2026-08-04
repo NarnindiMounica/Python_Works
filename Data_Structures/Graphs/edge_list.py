@@ -12,7 +12,7 @@ class GraphUsingEdgeList:
 
     def add_edge(self, source, destination, weight=1):
         if source in self.V and destination in self.V:
-            edge = (source, destination)
+            edge = (source, destination, weight)
             self.edges.append(edge)
-            
+
 
