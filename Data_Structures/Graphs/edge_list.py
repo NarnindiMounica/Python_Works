@@ -14,5 +14,6 @@ class GraphUsingEdgeList:
         if source in self.V and destination in self.V:
             edge = (source, destination, weight)
             self.edges.append(edge)
-
+        else:
+            return "Either one or both vertices are not found"
 
