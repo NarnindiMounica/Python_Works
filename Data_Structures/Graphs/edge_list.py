@@ -17,3 +17,13 @@ class GraphUsingEdgeList:
         else:
             return "Either one or both vertices are not found"
 
+
+graph = GraphUsingEdgeList()
+graph.add_vertex(1)
+graph.add_vertex(2)
+graph.add_vertex(3)
+
+graph.add_edge(1,2,1)
+graph.add_edge(2,3,1)
+
+
