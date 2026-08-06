@@ -13,4 +13,12 @@ class GraphAdjacencyMatrix:
     def add_edge(self, source, destination, weight=1):
         if 0 <= source < self.num_vertices and 0 <= destination < self.num_vertices:
             self.adj_matrix[source][destination] = weight
-            self.adj_matrix[destination][source] = weight    
+            self.adj_matrix[destination][source] = weight 
+
+    def display(self):
+        for index , label in enumerate(self.vertices):
+            if label != None:
+                print(f"Vertex Index: {index}, Label: {label}")
+
+        for row in self.adj_matrix:
+            print(row)                  
