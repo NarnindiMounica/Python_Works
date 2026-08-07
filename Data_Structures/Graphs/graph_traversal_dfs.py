@@ -16,3 +16,5 @@ class GraphAdjacencyMatrix:
             self.adj_matrix[source][destination] = weight
             self.adj_matrix[destination][source] = weight
 
+    def dfs(self, vertex):
+        
