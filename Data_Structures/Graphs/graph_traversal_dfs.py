@@ -10,3 +10,9 @@ class GraphAdjacencyMatrix:
             self.vertices[index] = label
         else:
             return "Index OOB"  
+
+    def add_edge(self, source, destination, weight=1):
+        if 0 <= source < self.num_vertices and 0 <= destination < self.num_vertices:
+            self.adj_matrix[source][destination] = weight
+            self.adj_matrix[destination][source] = weight
+
