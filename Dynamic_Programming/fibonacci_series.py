@@ -27,11 +27,31 @@ def fib_series(number):
     else:
         return fib_series(number-1) + fib_series(number-2)
 
+dairy_num = [-1] * (8)
+def fib_series_with_dp(number):
 
-print(fib_series_with_calls(5))
-print(num_dict) 
+    if dairy_num[number-1] != -1:
+        return dairy_num[number]
+
+    if number == 0:
+        return 0
+    elif number == 1:
+        return 1
+    else:
+        dairy_num[number-1] = fib_series_with_dp(number-1)
+        dairy_num[number-2] = fib_series_with_dp(number-2)
+
+        dairy_num[number] = dairy_num[number-1] + dairy_num[number-2]
+
+        return dairy_num[number]
+
+print(fib_series_with_dp(5))
 
 
-fib_series(number=5)
+# print(fib_series_with_calls(5))
+# print(num_dict) 
+
+
+# fib_series(number=5)
 
     
