@@ -27,10 +27,10 @@ def fib_series(number):
     else:
         return fib_series(number-1) + fib_series(number-2)
 
-dairy_num = [-1] * (8)
+dairy_num = [-1] * (9)
 def fib_series_with_dp(number):
 
-    if dairy_num[number-1] != -1:
+    if dairy_num[number] != -1:
         return dairy_num[number]
 
     if number == 0:
@@ -45,7 +45,7 @@ def fib_series_with_dp(number):
 
         return dairy_num[number]
 
-print(fib_series_with_dp(5))
+print(fib_series_with_dp(8))
 
 
 # print(fib_series_with_calls(5))
