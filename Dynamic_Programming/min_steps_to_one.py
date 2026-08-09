@@ -47,10 +47,18 @@ def min_steps_to_one_tab(number, dp):
     dp[1] = 0
 
     for i in range(2, number+1):
-        dp[i] = dp[i-1]+1
+        ans = dp[i-1]+1
+
+        if i%2 == 0:
+            ans = min(ans, dp[i//2]+1)
+
+        if i%3 == 0:
+            ans = min(ans, dp[i//3]+1)
+
+        dp[i] = ans       
     return dp[number]    
 
-number = 7
+number = 10
 dp = [0] * (number + 1)
 print(min_steps_to_one_tab(number, dp))        
 
