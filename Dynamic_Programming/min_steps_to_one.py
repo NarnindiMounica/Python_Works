@@ -26,20 +26,17 @@ def min_steps_to_one_dp(number, memo):
     if memo[number] != -1:
         return memo[number]
      
-    print(f"{number} n-1 step")
-    steps = min_steps_to_one_dp(number-1)+1
+    steps = min_steps_to_one_dp(number-1, memo)+1
 
-    print(f"{number} n//2 step")
     if number % 2 == 0:
-        steps = min(steps, min_steps_to_one_dp(number//2))+1
+        steps = min(steps, min_steps_to_one_dp(number//2, memo))+1
 
-    print(f"{number} n//3 step")
     if number % 3 == 0:
-        steps = min(steps, min_steps_to_one_dp(number//3))+1
+        steps = min(steps, min_steps_to_one_dp(number//3, memo))+1
 
     memo[number] = steps
     return memo[number]    
 
 number = 7
 memo = [-1] * (number + 1)
-print(min_steps_to_one(number, memo))
+print(min_steps_to_one_dp(number, memo))
