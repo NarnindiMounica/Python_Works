@@ -39,4 +39,20 @@ def min_steps_to_one_dp(number, memo):
 
 number = 7
 memo = [-1] * (number + 1)
+
 print(min_steps_to_one_dp(number, memo))
+
+def min_steps_to_one_tab(number, dp):
+
+    dp[1] = 0
+
+    for i in range(2, number+1):
+        dp[i] = dp[i-1]+1
+    return dp[number]    
+
+number = 7
+dp = [0] * (number + 1)
+print(min_steps_to_one_tab(number, dp))        
+
+
+    
