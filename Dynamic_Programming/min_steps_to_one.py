@@ -58,7 +58,7 @@ def min_steps_to_one_tab(number, dp):
         dp[i] = ans       
     return dp[number]    
 
-number = 10
+number = 9
 dp = [0] * (number + 1)
 print(min_steps_to_one_tab(number, dp))        
 
