@@ -18,5 +18,8 @@ def max_data_level_wise(root):
         temp = -1
         for eachchild in current_node.children:
             temp = max(temp, eachchild.val)
+            queue.append(eachchild)
+        max_node_list.append(temp)
+
 
 
