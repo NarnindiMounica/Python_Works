@@ -14,5 +14,9 @@ def max_data_level_wise(root):
     queue = deque([root])
     max_node_list = []
     while queue != 0:
-        current_node
+        current_node = queue.popleft()
+        temp = -1
+        for eachchild in current_node.children:
+            temp = max(temp, eachchild.val)
+
 
