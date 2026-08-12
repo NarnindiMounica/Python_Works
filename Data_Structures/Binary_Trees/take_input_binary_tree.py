@@ -15,7 +15,7 @@ def take_input_for_binary_tree():
 
     return root
 
-root = take_input_for_binary_tree()
-print_binary_tree_detailed(root)
+# root = take_input_for_binary_tree()
+# print_binary_tree_detailed(root)
 
 
