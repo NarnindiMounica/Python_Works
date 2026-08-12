@@ -63,5 +63,32 @@ print(inorder_traversal(root, []))
 #         return in_order_list
         
 #     return inorder_traversal_helper(root, [])
+
+
+# def postorder_traversal(root):
     
+#     def postorder_traversal_helper(root,post_order_list=[]):
+#         """
+#         Function to perform postorder traversal of a binary tree.
+#         :param root: TreeNode -> root of the binary tree
+#         :return: List[int] -> list of nodes in postorder
+#         """
+#         # TODO: Implement this function
+#         if root == None:
+#             return []
         
+        
+#         if root.left is not None:
+#             postorder_traversal_helper(root.left, post_order_list)
+            
+        
+#         if root.right is not None:
+#             postorder_traversal_helper(root.right, post_order_list)
+        
+#         post_order_list.append(root.val)    
+        
+#         return post_order_list
+        
+#     return postorder_traversal_helper(root, [])
+    
+    
