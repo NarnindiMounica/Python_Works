@@ -19,4 +19,4 @@ def max_depth_of_bt(root):
     return height
 
 root = take_input_binary_tree.take_input_for_binary_tree()
-print(max_depth_of_bt(root))
+print(max_depth_of_bt(root)
