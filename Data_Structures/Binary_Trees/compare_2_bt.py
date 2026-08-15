@@ -28,8 +28,9 @@ def is_same_tree(p, q):
 
 print("Enter node details of 1st tree: \n")
 p = take_input_binary_tree.take_input_for_binary_tree()
+print()
 print("Enter node details of 2nd tree: \n")
 q = take_input_binary_tree.take_input_for_binary_tree()
-
+print()
 print("Are both trees same: ")
 print(is_same_tree(p,q))
