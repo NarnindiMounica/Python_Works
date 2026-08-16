@@ -1,7 +1,25 @@
 from bst_node_and_printing import BSTNode
 
 def find_max(root):
-    pass
+    if root is None:
+        return  float("-inf")
+
+    left_max = find_max(root.left)
+    right_max = find_max(root.right)
+
+    ans = max(root.data, left_max, right_max)
+    return ans
+
+def find_min(root):
+    if root is None:
+        return float("inf")
+
+    left_min  = find_min(root.left)
+    right_min = find_min(root.right)
+
+    ans = min(root.data, left_min, right_min)
+    return ans
+
 
 def find_min(root):
     pass
