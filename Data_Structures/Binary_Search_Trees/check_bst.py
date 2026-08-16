@@ -1,4 +1,5 @@
 from bst_node_and_printing import BSTNode
+from predefined_bst import create_predefined_bst
 
 def find_max(root):
     if root is None:
@@ -21,9 +22,6 @@ def find_min(root):
     return ans
 
 
-def find_min(root):
-    pass
-
 def check_bst(root):
     if root is None: #empty tree is a bst
         return True
@@ -37,5 +35,9 @@ def check_bst(root):
     ans = left_bst and right_bst and (left_max < root.data and root.data < right_min)
 
     return ans
+
+
+root1, root2, root3 = create_predefined_bst()
+print(check_bst(root3))
 
     
