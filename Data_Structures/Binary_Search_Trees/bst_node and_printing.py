@@ -9,7 +9,7 @@ def print_bst(root):
         return None
 
     print_bst(root.left)
-    print(root.data, end = " ")
+    print(root.data, end = " ") #inorder traversal of bts
     print_bst(root.right)
 
             
