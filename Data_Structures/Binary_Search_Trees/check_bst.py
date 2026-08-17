@@ -46,7 +46,10 @@ def check_bst_using_range(root, minimum, maximum):
     ans_left = check_bst_using_range(root.left, minimum, root.data -1)
     ans_right = check_bst_using_range(root.right, root.data + 1, maximum)
 
+    return ans_left and ans_right
+
 root1, root2, root3 = create_predefined_bst()
 print(check_bst(root3))
+print(check_bst_using_range(root3, 20, 100))
 
     
