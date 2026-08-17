@@ -13,4 +13,6 @@ def print_bst_in_range(root, low, high):
     if low <= root.data <= high:
         print(root.data)
 
-root1,                 
+root1, root2, root3 = create_predefined_bst()
+
+print_bst_in_range(root3, 30, 60)
