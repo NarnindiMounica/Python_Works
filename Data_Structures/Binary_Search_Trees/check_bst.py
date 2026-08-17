@@ -36,6 +36,15 @@ def check_bst(root):
 
     return ans
 
+def check_bst_using_range(root, minimum, maximum):
+    if root is None:
+        return True
+
+    if root.data > maximum  or root.data < minimum:
+        return False
+
+    ans_left = check_bst_using_range(root.left, minimum, root.data -1)
+    ans_right = check_bst_using_range(root.right, root.data + 1, maximum)
 
 root1, root2, root3 = create_predefined_bst()
 print(check_bst(root3))
