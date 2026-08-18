@@ -50,6 +50,4 @@ def check_bst_using_range(root, minimum, maximum):
 
 root1, root2, root3 = create_predefined_bst()
 print(check_bst(root3))
-print(check_bst_using_range(root2, float("-inf"), float("inf"))
-
-    
+print(check_bst_using_range(root2, float("-inf"), float("inf")))
