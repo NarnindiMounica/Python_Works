@@ -9,5 +9,4 @@ class BST:
         self.root = None
 
     def insert(self, data):
-        pass    
-
+        
