@@ -11,13 +11,20 @@ class BST:
     def insert(self, data):
         pass
     
-    def search(self, data):
+    def search_helper(self, data, root):
         if self.root == None:
             return False
 
         if self.root.data == data:
             return True
-        
+
+        if data < self.root.data:
+            self.search_helper(self, data, root.left)
+
+            
+
+    def search(self,data):
+        return self.search_helper(self, data, self.root)    
 
     def delete(self, data):
         pass
