@@ -10,3 +10,14 @@ class BST:
 
     def insert(self, data):
         pass
+    
+    def search(self, data):
+        if self.root == None:
+            return False
+
+        if self.root.data == data:
+            return True
+        
+
+    def delete(self, data):
+        pass
