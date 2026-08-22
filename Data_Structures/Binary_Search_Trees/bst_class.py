@@ -42,3 +42,10 @@ class BST:
 
     def delete(self, data):
         pass
+
+
+
+bst_obj = BST()
+
+bst_obj.insert(10)
+bst_obj.insert(25)
