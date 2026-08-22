@@ -19,9 +19,10 @@ class BST:
             return True
 
         if data < self.root.data:
-            self.search_helper(self, data, root.left)
+           return self.search_helper(self, data, root.left)
 
-            
+        else:
+           return  self.search_helper(self, data, root.right)
 
     def search(self,data):
         return self.search_helper(self, data, self.root)    
