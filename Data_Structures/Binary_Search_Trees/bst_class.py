@@ -8,10 +8,17 @@ class BST:
     def __init__(self):
         self.root = None
     
-    def insert_helper(self, data, root):
-        if root == None:
+    def insert_helper(self, data, node):
+        if new_node == None:
             new_node = BSTNode(data)
             return new_node
+
+        if data < node.data:
+            node.left = self.insert_helper(self,data,node.left)
+        else:
+            node.right = self.insert_helper(self,data,node.right)
+        return node        
+
 
     def insert(self, data):
         self.root = self.insert_helper(self,data,self.root)    
