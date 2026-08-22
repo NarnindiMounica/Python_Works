@@ -7,12 +7,14 @@ class BSTNode:
 class BST:
     def __init__(self):
         self.root = None
+    
+    def insert_helper(self, data, root):
+        if root == None:
+            new_node = BSTNode(data)
+            return new_node
 
     def insert(self, data):
-        if self.root == None:
-            new_node = BSTNode(data)
-            self.root = new_node
-            return self.root
+        self.root = self.insert_helper(self,data,self.root)    
         
     
     def search_helper(self, data, root):
