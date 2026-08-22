@@ -9,7 +9,11 @@ class BST:
         self.root = None
 
     def insert(self, data):
-        pass
+        if self.root == None:
+            new_node = BSTNode(data)
+            self.root = new_node
+            return self.root
+        
     
     def search_helper(self, data, root):
         if self.root == None:
