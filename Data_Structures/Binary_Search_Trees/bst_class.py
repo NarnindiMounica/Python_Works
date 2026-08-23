@@ -49,4 +49,3 @@ bst_obj = BST()
 
 bst_obj.insert(10)
 bst_obj.insert(25)
-bst_obj.insert(30)
