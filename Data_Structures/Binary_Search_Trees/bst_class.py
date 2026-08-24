@@ -39,7 +39,14 @@ class BST:
            return  self.search_helper(data, node.right)
 
     def search(self,data):
-        return self.search_helper(data, self.root)    
+        return self.search_helper(data, self.root) 
+
+    def get_min_node(self, node):
+        current = node
+        while current.left != None:
+            current = current.left
+        return current    
+
 
     def delete_helper(self, data, node):
         if node == None:
@@ -49,8 +56,7 @@ class BST:
             node.left = self.delete_helper(data, node.left)
         elif data > node.data:
             node.right = self.delete_helper(data, node.right)
-
-        if data == node.data and node.left == None:
+        elif data == node.data and node.left == None:
             return node.right
         elif data == node.data and node.right == None:
             return node.left        
