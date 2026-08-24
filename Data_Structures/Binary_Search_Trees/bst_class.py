@@ -25,18 +25,18 @@ class BST:
         return self.root
         
     
-    def search_helper(self, data, root):
-        if self.root == None:
+    def search_helper(self, data, node):
+        if node == None:
             return False
 
-        if self.root.data == data:
+        if node.data == data:
             return True
 
-        if data < self.root.data:
-           return self.search_helper(data, root.left)
+        if data < node.data:
+           return self.search_helper(data, node.left)
 
         else:
-           return  self.search_helper(data, root.right)
+           return  self.search_helper(data, node.right)
 
     def search(self,data):
         return self.search_helper(data, self.root)    
@@ -51,4 +51,5 @@ bst_obj = BST()
 bst_obj.insert(10)
 bst_obj.insert(25)
 bst_obj.insert(30)
-bst_obj.search(25)
+print(bst_obj.search(35))
+print(bst_obj.search(25))
