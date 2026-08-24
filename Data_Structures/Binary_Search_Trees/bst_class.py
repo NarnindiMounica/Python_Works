@@ -41,7 +41,7 @@ class BST:
     def search(self,data):
         return self.search_helper(data, self.root)    
 
-    def delete(self, data:
+    def delete(self, data):
         pass
 
 
