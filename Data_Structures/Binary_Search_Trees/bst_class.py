@@ -59,7 +59,11 @@ class BST:
         elif data == node.data and node.left == None:
             return node.right
         elif data == node.data and node.right == None:
-            return node.left        
+            return node.left
+
+        min_larger_node = self.get_min_node(node.right)
+        node.data = min_larger_node.data
+        node.right = self.delete_helper(min_larger_node.data, node.right)        
 
     def delete(self, data):
         self.root = self.delete_helper(data, self.root)
