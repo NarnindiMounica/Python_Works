@@ -41,8 +41,23 @@ class BST:
     def search(self,data):
         return self.search_helper(data, self.root)    
 
+    def delete_helper(self, data, node):
+        if node == None:
+            return None
+
+        if data < node.data:
+            node.left = self.delete_helper(data, node.left)
+        elif data > node.data:
+            node.right = self.delete_helper(data, node.right)
+
+        if data == node.data and node.left == None:
+            return node.right
+        elif data == node.data and node.right == None:
+            return node.left        
+
     def delete(self, data):
-        pass
+        self.root = self.delete_helper(data, self.root)
+        return self.root
 
 
 
