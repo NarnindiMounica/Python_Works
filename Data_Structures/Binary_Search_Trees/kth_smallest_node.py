@@ -16,6 +16,6 @@ def kth_smallest(root, k):
         inorder(root.right, lst)
         
     lst = []
-    inorder(root, lst)
+    inorder(root, lst
     
     return lst[k-1]
