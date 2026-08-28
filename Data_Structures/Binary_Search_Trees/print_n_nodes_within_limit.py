@@ -23,4 +23,10 @@ def count_nodes_in_range(root, queries):
             count += count_nodes_in_range_helper(root.right, low, high, count)
         
         return count
+
+    for query in queries:
+        query_count = count_nodes_in_range_helper(root, query[0], query[1], count=0)
+        out_lst.append(query_count)
+    
+    return out_lst  
              
