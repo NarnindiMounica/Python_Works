@@ -3,3 +3,15 @@ class TreeNode:
         self.val = val
         self.left = left
         self.right = right
+
+def count_nodes_in_range(root, queries):
+    
+    out_lst = []
+    # Core logic for the learner to implement
+    def count_nodes_in_range_helper(root, low, high, count):
+        
+        if root == None:
+            return 0
+        
+        if low <= root.val <= high:
+            count += 1    
