@@ -14,7 +14,7 @@ def count_nodes_in_range(root, queries):
         if root == None:
             return 0
         
-        if low <= root.val <= high
+        if low <= root.val <= high:
             count += 1   
 
         if  root.val > low:
