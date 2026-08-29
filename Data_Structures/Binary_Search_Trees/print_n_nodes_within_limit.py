@@ -20,7 +20,7 @@ def count_nodes_in_range(root, queries):
         if  root.val > low:
             count += count_nodes_in_range_helper(root.left, low, high)
         
-        elif root.val < high:
+        if root.val < high:
             count += count_nodes_in_range_helper(root.right, low, high)
         
         return count
