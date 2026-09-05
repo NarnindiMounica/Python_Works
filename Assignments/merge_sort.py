@@ -40,10 +40,19 @@ def merge(arr, l, m, r):
 
     def mergeSort(arr, l, r):
         if l < r:
-        m = l + (r - l) // 2
+            m = l + (r - l) // 2
 
         # Sort first and second halves
         mergeSort(arr, l, m)
         mergeSort(arr, m + 1, r)
         merge(arr, l, m, r)
-        
+
+    # Driver code to test the above functions
+    arr = [12, 11, 13, 5, 6, 7]
+    print("Given array is")
+    print(arr)
+
+    mergeSort(arr, 0, len(arr) - 1)
+
+    print("\nSorted array is")
+    print(arr)    
