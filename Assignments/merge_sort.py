@@ -25,3 +25,25 @@ def merge(arr, l, m, r):
             arr[k] = R[j]
             j += 1
             k += 1
+
+    # Copy the remaining elements of L[], if any
+    while i < n1:
+        arr[k] = L[i]
+        i += 1
+        k += 1
+
+    # Copy the remaining elements of R[], if any
+    while j < n2:
+        arr[k] = R[j]
+        j += 1
+        k += 1
+
+    def mergeSort(arr, l, r):
+        if l < r:
+        m = l + (r - l) // 2
+
+        # Sort first and second halves
+        mergeSort(arr, l, m)
+        mergeSort(arr, m + 1, r)
+        merge(arr, l, m, r)
+        
