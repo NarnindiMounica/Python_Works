@@ -18,10 +18,10 @@ def merge(arr, l, m, r):
     k = l
 
     while i < n1 and j < n2:
-    if L[i] <= R[j]:
-        arr[k] = L[i]
-        i += 1
-    else:
-        arr[k] = R[j]
-        j += 1
-        k += 1
+        if L[i] <= R[j]:
+            arr[k] = L[i]
+            i += 1
+        else:
+            arr[k] = R[j]
+            j += 1
+            k += 1
