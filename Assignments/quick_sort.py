@@ -1,5 +1,12 @@
 def partitionFunction(l1, s, e):
-    pass
+    pivot = l1[e]
+    i = s
+
+    rightPosition = s
+
+    while(i <= e-1):
+        if (l1[i]<pivot):
+            rightPosition += 1
 
 def quicksorting(l1, s, e):
     if (s >= e):
