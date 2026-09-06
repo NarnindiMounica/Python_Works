@@ -6,3 +6,6 @@ def quicksorting(l1, s, e):
         return 
 
     pivotIndex = partitionFunction(l1,s, e)
+
+    quicksorting(l1, s, pivotIndex-1)
+    quicksorting(l1, pivotIndex+1, e)
