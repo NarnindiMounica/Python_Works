@@ -7,6 +7,10 @@ def partitionFunction(l1, s, e):
     while(i <= e-1):
         if (l1[i]<pivot):
             rightPosition += 1
+        i += 1
+    l1[rightPosition], l1[e] = l1[e], l1[rightPosition] 
+
+    pivotIndex = rightPosition               
 
 def quicksorting(l1, s, e):
     if (s >= e):
