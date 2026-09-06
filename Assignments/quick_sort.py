@@ -14,3 +14,4 @@ def quicksorting(l1, s, e):
 
 l1 = [3,6,7,2,1,4,5]
 quicksorting(l1, s=0, e=len(l1)-1)
+print(l1)
