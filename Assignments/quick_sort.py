@@ -24,7 +24,7 @@ def partitionFunction(l1, s, e):
         else:
             l1[start], l1[end] = l1[end], l1[start] 
             start += 1
-            end -=                   
+            end -= 1                
 
 def quicksorting(l1, s, e):
     if (s >= e):
