@@ -45,7 +45,10 @@ class CustomList:
         if index >= 0 and index < self.size:
             return self.array[index]
         else:
-            return "Index Error: Index out of range"       
+            return "Index Error: Index out of range"  
+
+    def clear(self):
+        self.size = 0         
 
 
 my_list = CustomList()
