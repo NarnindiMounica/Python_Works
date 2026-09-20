@@ -28,6 +28,14 @@ class CustomList:
 
     def __len__(self):
         return self.size
+
+    def __str__(self):
+        output_str = ''
+        for i in range(self.size):
+            output_str = output_str+str(self.array[i])+","
+        return f"[{output_str[:-1]}]"
+
+
 my_list = CustomList()
 my_list.append(1)
 my_list.append(2)
