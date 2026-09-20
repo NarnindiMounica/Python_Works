@@ -22,3 +22,11 @@ class CustomList:
     def append(self, item):
         if (self.size == self.capacity):
             self.__resize(2*self.capacity)
+
+        self.array[self.size] = item
+        self.size += 1  
+
+
+my_list = CustomList()
+my_list.append(1)
+print(my_list)          
