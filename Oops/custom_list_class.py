@@ -26,7 +26,10 @@ class CustomList:
         self.array[self.size] = item
         self.size += 1  
 
-
+    def __len__(self):
+        return self.size
 my_list = CustomList()
 my_list.append(1)
-print(my_list)          
+my_list.append(2)
+print(my_list)
+print(len(my_list))          
