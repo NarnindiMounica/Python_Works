@@ -39,17 +39,20 @@ class CustomList:
         if self.size==0:
             print("Empty List")
         popped_item = self.array[self.size-1]
-        self.size = self.size-1    
+        self.size = self.size-1 
+
+    def __getitem__(self, index):
+        if index >= 0 and index < self.size:
+            return self.array[index]
+        else:
+            return "Index Error: Index out of range"       
 
 
 my_list = CustomList()
 my_list.append(1)
 my_list.append(2)
 print(my_list)
-print(len(my_list)) 
-my_list.pop()
-print(my_list)
-my_list.pop()
-print(my_list)
-my_list.pop() 
+print(len(my_list))
+print(my_list[1]) 
+
         
