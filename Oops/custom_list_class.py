@@ -35,9 +35,21 @@ class CustomList:
             output_str = output_str+str(self.array[i])+","
         return f"[{output_str[:-1]}]"
 
+    def pop(self):
+        if self.size==0:
+            print("Empty List")
+        popped_item = self.array[self.size-1]
+        self.size = self.size-1    
+
 
 my_list = CustomList()
 my_list.append(1)
 my_list.append(2)
 print(my_list)
-print(len(my_list))          
+print(len(my_list)) 
+my_list.pop()
+print(my_list)
+my_list.pop()
+print(my_list)
+my_list.pop() 
+        
