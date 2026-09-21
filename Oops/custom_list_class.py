@@ -15,8 +15,8 @@ class CustomList:
         new_array=self.__create_array(new_capacity)
         for i in range(self.size):
             new_array[i] = self.array[i]
-            self.array = new_array
-            self.capacity = new_capacity
+        self.array = new_array
+        self.capacity = new_capacity
 
 
     def append(self, item):
