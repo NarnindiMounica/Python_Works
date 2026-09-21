@@ -23,3 +23,14 @@ class CustomList:
             self.array = self.__resize_array(2*self.capacity)
 
         self.array[self.size] = item
+        self.size += 1
+
+    def __len__(self):
+        return self.size
+
+    def __str__(self):
+        output_str = ''
+        for i in range(self.size+1):
+            output_str = output_str + str(i)+","
+        return f"[{output_str[:-1]}]"    
+
