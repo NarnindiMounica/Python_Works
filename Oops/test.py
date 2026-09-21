@@ -11,17 +11,18 @@ class CustomList:
 
     def __resize_array(self, new_capacity):
         new_array = self.__create_array(new_capacity)
+        
         for i in range(self.size):
+
             new_array[i] = self.array[i]
-
-        self.capacity = new_capacity
-        self.array = new_array   
-
+        
+        self.array = new_array
+        self.capacity = new_capacity  
 
     def append(self, item):
         if self.size == self.capacity:
-            self.array = self.__resize_array(2*self.capacity)
-
+            self.__resize_array(2*self.capacity)
+        
         self.array[self.size] = item
         self.size += 1
 
@@ -38,4 +39,7 @@ custom_list_obj = CustomList()
 print(custom_list_obj)
 print(len(custom_list_obj))
 custom_list_obj.append(1)
+print(custom_list_obj)
+print(len(custom_list_obj))
+custom_list_obj.append(2)
 print(custom_list_obj)
