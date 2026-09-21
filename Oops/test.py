@@ -30,7 +30,12 @@ class CustomList:
 
     def __str__(self):
         output_str = ''
-        for i in range(self.size+1):
-            output_str = output_str + str(i)+","
+        for i in range(self.size):
+            output_str = output_str + str(self.array[i])+","
         return f"[{output_str[:-1]}]"    
 
+custom_list_obj = CustomList()
+print(custom_list_obj)
+print(len(custom_list_obj))
+custom_list_obj.append(1)
+print(custom_list_obj)
