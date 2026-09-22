@@ -48,7 +48,10 @@ class CustomList:
             return "Index Error: Index out of range"  
 
     def clear(self):
-        self.size = 0         
+        self.size = 0  
+
+    def insert(self, item, position):
+                   
 
 
 my_list = CustomList()
