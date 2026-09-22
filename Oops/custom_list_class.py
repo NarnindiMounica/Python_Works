@@ -52,11 +52,9 @@ class CustomList:
 
     def insert(self, item, position):
         if self.size == self.capacity:
-            self.__resize_array(2*self.capacity)
-
+            self.__resize(2*self.capacity)
         for i in range(self.size, position,-1):
             self.array[i] = self.array[i-1]  
-
         self.array[position] = item
         self.size += 1      
 
@@ -67,6 +65,8 @@ my_list.append(1)
 my_list.append(2)
 print(my_list)
 print(len(my_list))
-print(my_list[1]) 
+print(my_list[1])
+my_list.insert(9,1)
+print(my_list) 
 
         
