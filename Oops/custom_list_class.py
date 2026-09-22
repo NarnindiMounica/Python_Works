@@ -56,7 +56,15 @@ class CustomList:
         for i in range(self.size, position,-1):
             self.array[i] = self.array[i-1]  
         self.array[position] = item
-        self.size += 1      
+        self.size += 1 
+
+    def remove(self, item):
+        for i in range(self.size+1):
+            if item == self.array[i]:
+                self.array[i] = self.array[i+1]
+                
+
+
 
 
 
