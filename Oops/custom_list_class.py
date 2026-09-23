@@ -64,7 +64,9 @@ class CustomList:
                 pos = i
                 for i in range(pos+1, self.size):
                     self.array[i-1] = self.array[i]
-        self.size -= 1   
+                self.size -= 1 
+                break
+        else: return "Element not found"      
 
 my_list = CustomList()
 my_list.append(1)
