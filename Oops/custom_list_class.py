@@ -60,11 +60,11 @@ class CustomList:
 
     def remove(self, item):
         for i in range(self.size):
-            print(f"im item in {i} {self.array[i]}")
             if int(self.array[i]) == int(item):
-                self.array[i] = self.array[i+1]
+                pos = i
+                for i in range(pos+1, self.size):
+                    self.array[i-1] = self.array[i]
         self.size -= 1   
-
 
 my_list = CustomList()
 my_list.append(1)
@@ -74,7 +74,7 @@ print(len(my_list))
 print(my_list[1])
 my_list.insert(3,2)
 print(my_list)
-my_list.remove(3) 
+my_list.remove(2) 
 print(my_list)
 
         
