@@ -1,3 +1,6 @@
+import sys
+print("Running with interpreter:", sys.executable)
+
 from flask import Flask
 
 '''
