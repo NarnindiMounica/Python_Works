@@ -16,7 +16,7 @@ def welcome():
 
 @app.route("/Index")
 def index_func():
-    return '<html><H1>welcome to html</H1></html'
+    return '<html><H1>welcome to html</H1></html>'
 
 
 if __name__=="__main__":
