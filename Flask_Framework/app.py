@@ -16,7 +16,7 @@ def welcome():
 
 @app.route("/Index")
 def index_func():
-    return render_template
+    return render_template("index.html")
 
 
 if __name__=="__main__":
