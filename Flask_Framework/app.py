@@ -14,10 +14,9 @@ app = Flask(__name__)
 def welcome():
     return 'Welcome Here !!! Im changed now'
 
-@app.route("/Index")
+@app.route("/index")
 def index_func():
     return render_template("index.html")
-
 
 if __name__=="__main__":
     app.run(debug=True)
