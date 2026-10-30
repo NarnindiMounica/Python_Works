@@ -1,7 +1,7 @@
 # import sys
 # print("Running with interpreter:", sys.executable)
 
-from flask import Flask
+from flask import Flask, render_template
 
 '''
 It creates an instance of flask class,
@@ -16,7 +16,7 @@ def welcome():
 
 @app.route("/Index")
 def index_func():
-    return '<html><H1>welcome to html</H1></html>'
+    return render_template
 
 
 if __name__=="__main__":
