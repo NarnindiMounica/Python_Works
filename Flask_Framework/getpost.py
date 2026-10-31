@@ -11,6 +11,7 @@ def index_func():
 def form_func():
     if request.method=='POST':
         pass
+    return render_template("form.html")
     name = request.form['name']
     return f"Hello {name}"
 
