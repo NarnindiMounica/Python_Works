@@ -20,9 +20,9 @@ def pass_score(score):
 @app.route("/result/<int:marks>")
 def result_display(marks):
     if marks >= 50:
-        res="pass"
+        res="passed"
     else:
-        res="fail"
+        res="failed"
     return render_template("result_page.html", res=res)      
         
 
