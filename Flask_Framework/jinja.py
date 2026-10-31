@@ -23,7 +23,12 @@ def result_display(marks):
         res="passed"
     else:
         res="failed"
-    return render_template("result_page.html", res=res)      
+    return render_template("result_page.html", res=res) 
+
+#example:2
+@app.route("/display_result/<int:marks>") 
+def display_result(marks):
+    return render_template("result.html", marks=marks)    
         
 
 if __name__=="__main__":
