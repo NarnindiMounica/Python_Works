@@ -42,7 +42,6 @@ def get_result():
         avg_marks = (science+maths+c)/3
         return redirect(url_for("display_result", marks=int(avg_marks)))
 
-
 if __name__=="__main__":
     app.run(port=8000, debug=True)
 
