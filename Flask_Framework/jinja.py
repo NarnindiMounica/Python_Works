@@ -43,3 +43,5 @@ def get_result():
         return redirect(url_for("display_result", marks=int(avg_marks)))
     return render_template("exam_results.html")
 
+if __name__=="__main__":
+    app.run()
