@@ -38,7 +38,17 @@ def create_item():
     items.append(new_item)
     return items
 
-#put: 
+#put: update an existing item
+@app.route("/items/<int:item_id>", methods=['PUT'])
+def update_item(item_id):
+    selected_item = next((item for item in items if item['id']==item_id), None)
+    if selected_item is None:
+        return jsonify({"error":"item not found"})
+    selected_item['name'] = request.json.get("name", selected_item['name'] )
+    selected_item['description'] = request.json.get("description", selected_item['description'])
+
+if __name__=="__main__":
+    app.run(debug=True, port=8000)    
 
 
     
