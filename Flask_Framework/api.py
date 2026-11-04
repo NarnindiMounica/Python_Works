@@ -36,7 +36,7 @@ def create_item():
     "name":request.json['name'],
     "description":request.json['description']}
     items.append(new_item)
-    return items
+    return jsonify(items)
 
 #put: update an existing item
 @app.route("/items/<int:item_id>", methods=['PUT'])
@@ -46,6 +46,7 @@ def update_item(item_id):
         return jsonify({"error":"item not found"})
     selected_item['name'] = request.json.get("name", selected_item['name'] )
     selected_item['description'] = request.json.get("description", selected_item['description'])
+    return jsonify(items)
 
 if __name__=="__main__":
     app.run(debug=True, port=8000)    
