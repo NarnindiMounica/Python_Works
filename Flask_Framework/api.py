@@ -29,4 +29,16 @@ def get_item(item_id):
 
 #post: create a new task
 @app.route("/items", methods=['POST'])
-def 
+def create_item():
+    if not request.json or not "name" in request.json:
+        return jsonify({"error":"item not found"})
+    new_item = {"item_id" : items[-1]['id'] + 1 if items else 1,
+    "name":request.json['name'],
+    "description":request.json['description']}
+    items.append(new_item)
+    return items
+
+#put: 
+
+
+    
