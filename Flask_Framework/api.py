@@ -10,7 +10,7 @@ items = [{"id": 1, "name": "item 1", "description": "this is item 1"},
          {"id": 2, "name": "item 2", "description": "this is item 2"},
          {"id": 3, "name": "item 3", "description": "this is item 3"}]
 
-@app.rooute("/")
+@app.route("/")
 def home():
     return "Welcome to the sample to-do list app"
 
