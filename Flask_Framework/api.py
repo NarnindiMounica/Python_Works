@@ -54,6 +54,8 @@ def delete_item(item_id):
     selected_item = next((item for item in items if item['id']==item_id), None)
     if selected_item == None:
         return jsonify({"error":"item not found"})
+    items.remove(selected_item)
+    return jsonify(items)
 
 if __name__=="__main__":
     app.run(debug=True, port=8000)    
