@@ -50,7 +50,10 @@ def update_item(item_id):
 
 #delete: delete selected item
 @app.route("/items/<int:item_id", methods=['DELETE'])
-def delete_item(item_id)
+def delete_item(item_id):
+    selected_item = next((item for item in items if item['id']==item_id), None)
+    if selected_item == None:
+        return jsonify({"error":"item not found"})
 
 if __name__=="__main__":
     app.run(debug=True, port=8000)    
