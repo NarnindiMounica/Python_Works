@@ -57,6 +57,10 @@ def delete_item(item_id):
     items.remove(selected_item)
     return jsonify(items)
 
+# def delete_item(item_id):
+#     items = [item for item in items if item['id'] != item_id]
+#     return jsonify(items)
+
 if __name__=="__main__":
     app.run(debug=True, port=8000)    
 
