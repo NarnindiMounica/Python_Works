@@ -48,6 +48,10 @@ def update_item(item_id):
     selected_item['description'] = request.json.get("description", selected_item['description'])
     return jsonify(items)
 
+#delete: delete selected item
+@app.route("/items/<int:item_id", methods=['DELETE'])
+def delete_item(item_id)
+
 if __name__=="__main__":
     app.run(debug=True, port=8000)    
 
