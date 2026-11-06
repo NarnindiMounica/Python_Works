@@ -12,7 +12,7 @@ items = [{"id": 1, "name": "item 1", "description": "this is item 1"},
 
 @app.route("/")
 def home():
-    return "Welcome to the sample to-do list app"
+    return "<html><H1>Welcome to the sample to-do list app</H1></html>"
 
 #get: retrieve all items
 @app.route("/items", methods=['GET'])
